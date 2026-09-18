@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue — pip._.nails</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Gloock&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="catalogue.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="index.html">pip<span class="dot">.</span>_<span class="dot">.</span>nails</a>
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <button class="saved-toggle" data-open-drawer aria-expanded="false">
+        Saved <span class="count" data-count>0</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <h1>Every set, made by hand</h1>
+    <p>Tap the heart on anything you like. Your picks stay on this device, and you can send the whole list over when you're ready.</p>
+  </div>
+
+  <div class="filters" data-filters>
+    <div class="filter-group" data-group="length">
+      <span>Length</span>
+      <button class="chip" data-value="all" aria-pressed="true">All</button>
+      <button class="chip" data-value="Short" aria-pressed="false">Short</button>
+      <button class="chip" data-value="Medium" aria-pressed="false">Medium</button>
+      <button class="chip" data-value="Long" aria-pressed="false">Long</button>
+    </div>
+
+    <div class="filter-group" data-group="shape">
+      <span>Shape</span>
+      <button class="chip" data-value="all" aria-pressed="true">All</button>
+      <button class="chip" data-value="Almond" aria-pressed="false">Almond</button>
+      <button class="chip" data-value="Stiletto" aria-pressed="false">Stiletto</button>
+    </div>
+  </div>
+
+  <p class="result-count" data-result-count></p>
+
+  <ul class="grid" data-grid></ul>
+</main>
+
+<!-- saved drawer -->
+<div class="scrim" data-scrim hidden></div>
+
+<aside class="drawer" data-drawer aria-label="Saved sets" hidden>
+  <div class="drawer-head">
+    <h2>Your picks</h2>
+    <button class="icon-btn" data-close-drawer aria-label="Close saved list">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="drawer-body" data-drawer-body></div>
+
+  <div class="drawer-foot" data-drawer-foot hidden>
+    <p class="total">Total <b data-total></b></p>
+    <button class="btn-primary" data-enquire>Copy list and message pip</button>
+    <button class="btn-quiet" data-clear>Clear all</button>
+  </div>
+</aside>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="catalogue.js"></script>
+</body>
+</html>
